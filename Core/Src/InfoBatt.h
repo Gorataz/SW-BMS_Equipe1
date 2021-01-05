@@ -39,4 +39,20 @@ float InfoBatt_getVoltage(int nb_batt);
 float InfoBatt_getSoc(int nb_batt);
 
 
+
+/*
+ *
+ * 	FONCTION SUPPORT
+ *
+ */
+
+/*
+ * @brief: This function allows reading a specific register
+ * through the I2C communication channel
+ * @param: uint8_t register_pointer register's address,
+ * I2C_HandleTypeDef *hi2c which channel/battery we are looking for
+ * @retval: uint16_t pointer to the register's value
+ */
+uint16_t read_register(uint8_t register_pointer,I2C_HandleTypeDef *hi2c);
+
 #endif /* SRC_INFOBATT_H_ */
